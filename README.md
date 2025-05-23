@@ -1,5 +1,5 @@
 This is the flask web view of the 5G Communication Interface with a client and server 
-In which the client enter a message in web and the web gives the exact message back.
+in which the client enter a message in web and the web gives the exact message back.
 
 For login, refer to the .env file.
 
