@@ -7,8 +7,8 @@ The file needs to be done in the virtual environment on VS code.
 
 Steps:
 (1) Type in youyr terminal shell: 
-    python (python3) -m venv venv
-    source venv/bin/activate
+    python (python3) -m venv venv,
+    source venv/bin/activate,
     source venv\Scripts\activate # On Windows
 
 (2) Install the requirements: pip install -r requirements.txt
