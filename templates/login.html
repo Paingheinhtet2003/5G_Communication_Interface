@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>5G Communication Interface - Login</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f5f5f5; }
+        .container {
+            max-width: 350px;
+            margin: 100px auto;
+            padding: 30px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px #ccc;
+        }
+        h2 { text-align: center; }
+        input[type="text"], input[type="password"] {
+            width: 100%; padding: 10px; margin: 5px 0 15px; border: 1px solid #ccc; border-radius: 4px;
+        }
+        input[type="submit"] {
+            width: 100%; padding: 10px; background: #1976d2; color: #fff; border: none; border-radius: 4px;
+            font-size: 16px; cursor: pointer;
+        }
+        input[type="submit"]:hover { background: #125a9c; }
+        .flash-success { color: green; text-align: center; }
+        .flash-danger { color: red; text-align: center; }
+        .flash-warning { color: orange; text-align: center; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Login</h2>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <label for="username">{{ form.username.label }}</label>
+        {{ form.username(size=32) }}
+        <label for="password">{{ form.password.label }}</label>
+        {{ form.password(size=32) }}
+        <br>
+        {{ form.submit() }}
+    </form>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="flash-{{ category }}">{{ message }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+</div>
+</body>
+</html>
